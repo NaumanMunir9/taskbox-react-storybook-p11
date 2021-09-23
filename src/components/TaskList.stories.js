@@ -4,7 +4,7 @@ import React from "react";
 // components
 import { PureTaskList } from "./TaskList";
 
-// stories
+// components-stories
 import * as TaskStories from "./Task.stories";
 
 export default {
