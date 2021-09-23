@@ -1,9 +1,17 @@
+// libraries
 import React from "react";
+import { Provider } from "react-redux";
+
+// components
+import InboxScreen from "./components/InboxScreen";
+
+// lib
+import store from "./lib/redux";
 
 export default function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
   );
 }
