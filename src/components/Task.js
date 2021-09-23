@@ -1,4 +1,6 @@
+// libraries
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Task({
   task: { id, title, state },
@@ -37,3 +39,14 @@ export default function Task({
     </div>
   );
 }
+
+Task.propTypes = {
+  // composition of the task
+  task: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+  }),
+  onArchiveTask: PropTypes.func,
+  onPinTask: PropTypes.func,
+};
